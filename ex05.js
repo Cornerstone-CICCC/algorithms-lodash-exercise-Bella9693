@@ -4,8 +4,12 @@ const _ = require("lodash");
 
 const numbers = [1, 2, 3, 4];
 
-const product = numbers.reduce((acc, curr) => {
-  return acc * curr;
-});
+const product = _.reduce(
+  numbers,
+  (total, double) => {
+    return total * double;
+  },
+  1
+);
 
 console.log(product); // Expected output: 24
